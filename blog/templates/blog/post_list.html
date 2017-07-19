@@ -6,8 +6,15 @@
         <div>
             <h1><a href="">Alyce and Jenny's Blog</a></h1>
         </div>
+        {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
 
-        <div>
+        {{ posts }}
 
             <h2><a href=""> Alyce's Post</a></h2>
             <p>Hi c: </p>
@@ -15,10 +22,10 @@
         </div>
 
         <div>
-            
+
             <h2><a href="">Jenny's Post</a></h2>
             <p>Hi (:</p>
             <p>published: 20.07.2017, 6:00PM</p>
-        </div>
+        {{ posts }}
     </body>
 </html>
